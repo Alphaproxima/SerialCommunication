@@ -12,8 +12,9 @@ void loop() {
   sensorValue1 = analogRead(leftsensor);
   sensorValue2 = analogRead(rightsensor);
 
-  Serial.print(sensorValue1);
-  Serial.println(sensorValue2);
+  Serial.print(sensorValue1 + ',' + sensorValue2); // data serialization on .csv format
+  // Serial.print(String(sensorValue1) + ',' + String(sensorValue2)); // if not work, use this
+  // Serial.println(sensorValue2);
 
   delay(10); 
 }
